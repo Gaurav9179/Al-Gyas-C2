@@ -1,10 +1,29 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 export default function Home() {
     useEffect(() => {
         document.documentElement.classList.add('dark');
     }, []);
+
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const handleMouseMove = (event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const xPos = event.clientX - rect.left - rect.width / 2;
+        const yPos = event.clientY - rect.top - rect.height / 2;
+        x.set(xPos);
+        y.set(yPos);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
+    const rotateX = useTransform(y, [-500, 500], [20, -20]);
+    const rotateY = useTransform(x, [-500, 500], [-20, 20]);
 
     return (
         <div className="antialiased selection:bg-primary/30 min-h-screen bg-surface text-on-surface">
@@ -12,21 +31,26 @@ export default function Home() {
 {/* TopNavBar */}
 
 {/* Hero Section */}
-<section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<section className="relative h-screen w-full flex items-center justify-center overflow-hidden perspective-[1000px]">
 <div className="absolute inset-0 z-0">
 <img alt="" className="w-full h-full object-cover opacity-40 scale-105" data-alt="cinematic wide shot of a sun-drenched wheat field at sunrise with a distant cargo ship on a misty horizon, deep green and gold tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiZOtMrjl18BnYqsNGhGebpRv4TsnF9u4ACReXnDwFvGxWgVRt4_XCNVzbhN8xz_5AHAxlzVtbfTC1oPovgr3h8u4sr5ADhwY-jYpytoLESjAQEEYteIigpnkvt037l7fXutPkgaMalVrL3DOqyminruXtwUM_9EkB1gMxTpOZn_GZIY0wI8WQDbH1zLZoCPpfjTzAHm52xbvQIQ2qytvmRBTeMoxJKqijESLWE9QOnJtsLklOXGTzXqd5obzgKPpglKUZnW1lK_o"/>
 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface-container-lowest/80"></div>
 </div>
-<div className="relative z-10 text-center max-w-5xl px-6">
-<motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label text-xs font-bold uppercase tracking-[0.2em]">Established 1994</motion.span>
-<motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-headline text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 text-on-surface text-glow">
-                Staple Supply Specialist &amp; <span className="text-primary italic">Pulse to Plate</span> Precision
+<motion.div 
+    onMouseMove={handleMouseMove}
+    onMouseLeave={handleMouseLeave}
+    style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+    className="relative z-10 text-center max-w-5xl px-6 w-full h-full flex flex-col justify-center items-center"
+>
+<motion.span style={{ transform: "translateZ(80px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label text-xs font-bold uppercase tracking-[0.2em] shadow-xl">Established 1994</motion.span>
+<motion.h1 style={{ transform: "translateZ(120px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-headline text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 text-on-surface text-glow drop-shadow-2xl">
+                Staple Supply Specialist &amp; <br/><span className="text-primary italic">Pulse to Plate</span> Precision
             </motion.h1>
-<motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} className="font-body text-lg md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed opacity-90">
+<motion.p style={{ transform: "translateZ(60px)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} className="font-body text-lg md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed opacity-90 drop-shadow-lg">
                 Premium Agricultural Products Worldwide. Over 30 years of excellence in sourcing, processing, and global logistics.
             </motion.p>
-<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.6 }} className="flex flex-col md:flex-row items-center justify-center gap-6">
-<a className="group relative px-10 py-5 bg-gradient-to-br from-primary to-primary-container rounded-lg overflow-hidden shadow-xl hover:shadow-primary/20 transition-all duration-500" href="#products">
+<motion.div style={{ transform: "translateZ(100px)" }} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.6 }} className="flex flex-col md:flex-row items-center justify-center gap-6">
+<a className="group relative px-10 py-5 bg-gradient-to-br from-primary to-primary-container rounded-lg overflow-hidden shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:scale-105 active:scale-95" href="#products">
 <span className="relative z-10 font-headline font-extrabold text-on-primary uppercase tracking-widest text-sm flex items-center gap-2">
                         Explore Our Products
                         <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -36,9 +60,9 @@ export default function Home() {
                     View Infrastructure
                 </button>
 </motion.div>
-</div>
+</motion.div>
 {/* Scroll Indicator */}
-<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 z-20">
 <span className="font-label text-[10px] tracking-[0.3em] uppercase">Scroll</span>
 <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
 </div>
