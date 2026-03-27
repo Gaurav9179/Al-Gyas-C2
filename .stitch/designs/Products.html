@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Al-Gyas Premium | Staple Supply &amp; Pulse Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#5a302f",
+              "on-tertiary-container": "#d29895",
+              "secondary": "#e9c349",
+              "surface": "#0b1326",
+              "surface-container-lowest": "#060e20",
+              "primary-fixed-dim": "#a5d0b9",
+              "outline": "#8b938d",
+              "surface-container-highest": "#2d3449",
+              "background": "#0b1326",
+              "primary-container": "#1b4332",
+              "tertiary-fixed": "#ffdad8",
+              "tertiary-fixed-dim": "#f5b7b4",
+              "on-secondary": "#3c2f00",
+              "surface-variant": "#2d3449",
+              "on-error": "#690005",
+              "on-secondary-container": "#342800",
+              "on-surface": "#dae2fd",
+              "on-background": "#dae2fd",
+              "surface-container": "#171f33",
+              "surface-container-high": "#222a3d",
+              "on-primary": "#0e3727",
+              "on-secondary-fixed": "#241a00",
+              "surface-dim": "#0b1326",
+              "secondary-fixed": "#ffe088",
+              "outline-variant": "#414844",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#e9c349",
+              "surface-container-low": "#131b2e",
+              "inverse-on-surface": "#283044",
+              "on-surface-variant": "#c1c8c2",
+              "error-container": "#93000a",
+              "surface-bright": "#31394d",
+              "primary-fixed": "#c1ecd4",
+              "inverse-surface": "#dae2fd",
+              "inverse-primary": "#3f6653",
+              "on-primary-fixed": "#002114",
+              "on-primary-container": "#86af99",
+              "tertiary": "#f5b7b4",
+              "surface-tint": "#a5d0b9",
+              "error": "#ffb4ab",
+              "primary": "#a5d0b9",
+              "on-tertiary-fixed-variant": "#673a39",
+              "on-primary-fixed-variant": "#274e3d",
+              "on-tertiary-fixed": "#331111",
+              "secondary-container": "#af8d11",
+              "on-tertiary": "#4c2524"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow-gold {
+            text-shadow: 0 0 15px rgba(233, 195, 73, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-950/70 dark:bg-[#0b1326]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tighter text-[#e9c349] dark:text-[#e9c349]">Al-Gyas Premium</span>
+</div>
+<div class="hidden md:flex items-center space-x-8 font-['Inter'] font-semibold tracking-tight text-sm">
+<a class="text-[#e9c349] border-b-2 border-[#e9c349] pb-1" href="#">Catalog</a>
+<a class="text-[#a5d0b9] hover:text-[#e9c349] transition-colors" href="#">Sustainability</a>
+<a class="text-[#a5d0b9] hover:text-[#e9c349] transition-colors" href="#">Traceability</a>
+<a class="text-[#a5d0b9] hover:text-[#e9c349] transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-lowest px-4 py-2 rounded-full border border-outline-variant/15">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-48 text-on-surface-variant" placeholder="Search our stocks..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[#a5d0b9]">account_circle</span>
+</button>
+<button class="hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[#a5d0b9]">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center px-8 md:px-20 overflow-hidden mb-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="cinematic close up of long grain basmati rice being poured from a burlap sack under warm golden sunlight in a warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLkvE0hNkSXiHUOrkX4ZyYVkPyNazeRnDQjUiXtB7MC46IVi2eCQQD_PYcMjxljoVSJ5X7Hahzc1gYzUczS_pwNK6aY4kSS8R7v5-vR5wrwQLr1ZZLCIDQaNRgMhFE9qSm5SFYEeO0kRfv8x70t4Ual2UvYi3HdDA-btedXKqqnDS6U1pk2SGFMg9MJ6E4IzT6KYCeAd3OpEdC6TxEcqInPZyg0E0eEOW09e7vkNpCWtPXjeRo6HN9OJ3Nxhtafn1ya-Mm8odBIIs"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<span class="text-secondary font-semibold tracking-[0.3em] uppercase text-xs mb-4 block">Global Distribution Excellence</span>
+<h1 class="text-6xl md:text-8xl font-black text-on-surface tracking-tighter leading-tight mb-8">
+                    Staple Supply &amp; <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Pulse Precision</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed font-light">
+                    Al-Gyas bridges the gap between industrial scale and artisan quality. We deliver the world's finest staples with tech-driven logistics and sustainable stewardship.
+                </p>
+</div>
+</section>
+<!-- Rice Catalog -->
+<section class="px-8 md:px-20 mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="text-4xl font-bold tracking-tight text-on-surface mb-2">The Rice Collection</h2>
+<div class="w-24 h-1 bg-secondary rounded-full"></div>
+</div>
+<div class="flex gap-4">
+<span class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Capacity: 1200 MT/day</span>
+<span class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">ISO-certified</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-10px] hover:bg-surface-container-highest">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="3D style high-angle photograph of premium basmati rice grains scattered on a dark slate surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC06dkjTkTowElQ5PYjHdH22Yvy2CW5YZ5L3-U3hJ6GlIrbUE4JV4_sifFjnLZmw0unn4hLkmaiv9AiDUdPxbW2tlTebtQmgsfzA9GVuiqpyqUEi404cq3pFbhs0cFJO55xHeQdyH_nAzHNkfVfAryqyKuJssf0btukpCXjovPm0k4YxVqk5_kGSHr06_HWtMST4F0KaSRyj3kaHrFPy3JdKB-Rq89tUhdM2cCX2hTj2klU8xNob3TBX7OAr_Q8Zs17mvZRBvvUFuA"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-on-surface">Premium Basmati Rice</h3>
+<span class="text-secondary text-sm font-black">GRADE A+</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Long-grain perfection aged for 24 months to ensure maximum aroma and fluffiness.</p>
+<button class="w-full py-3 bg-primary-container text-secondary font-bold rounded-lg border border-secondary/10 hover:bg-secondary hover:text-on-secondary transition-all">View Specifications</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-10px] hover:bg-surface-container-highest lg:mt-12">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="elegant macro shot of raw white rice in a wooden bowl with golden light reflections and soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1V1CrxIn2Vkdldv3XPEh7E2G6t60uNd42Rj1u-rgFdqFKpqg_gm8-9DMCRppGNvXYmNT7eKlaoMTfGXaKEDtQIKQibYBDkQgXVJKWLooey-q1OoXIeRffdtpoCO3WR8Eb1FepzdO3Ytx0qIsFIcraZyV3117oBOeKviBsAfabpgPjbIhZunMRxMCzE5iQ3V_A5PkG5mT03a_UCREDl6ta_e5oiF2eSdfHZxz4UeuR0sKaxZyuoq9WVOC4_qu-wRvXNGoQoZB02qw"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-on-surface">1121 Sella Rice</h3>
+<span class="text-secondary text-sm font-black">PARBOILED</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Extra long grain length and golden hue, ideal for large scale premium catering.</p>
+<button class="w-full py-3 bg-primary-container text-secondary font-bold rounded-lg border border-secondary/10 hover:bg-secondary hover:text-on-secondary transition-all">View Specifications</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-10px] hover:bg-surface-container-highest">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="high quality food photography of jasmine rice grains being poured into a ceramic bowl with atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLZ0qDLTMXLgRLTC-b1tuy7ZQF0ZtmVrStfDm4qOGSnL4up4luAszWpp-y23X-SO-CPwlu-aJZflkGs3_68J24UjyYvyAQ8FHj1-WutTGwOT3mVhnryMv19bZesTk8BM56nbqH0LOkyUlREbOW1b4NDmkbVnwWJjBGN-vFUO39EoQY3fAO-j12F0aD1tBCZInFEZfIS7_tHWciN6t6b0eZ2VVC7HkzwV1L50CKNOBgz4_lawOj-N8FRkmceaEkBYbZmZVt9720t0M"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-on-surface">Silky Polished Rice</h3>
+<span class="text-secondary text-sm font-black">EXPORT</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Expertly processed using state-of-the-art Sortex machines for zero impurities.</p>
+<button class="w-full py-3 bg-primary-container text-secondary font-bold rounded-lg border border-secondary/10 hover:bg-secondary hover:text-on-secondary transition-all">View Specifications</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pulse Precision Section -->
+<section class="bg-surface-container-low py-32 px-8 md:px-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-4">
+<h2 class="text-5xl font-black text-on-surface tracking-tighter mb-6">Pulse <br/>Precision</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        Our global sourcing network ensures that only the most nutrient-dense pulses reach your doorstep. Processing 200 MT daily through precision-engineered plants.
+                    </p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="text-sm font-bold tracking-widest text-primary">SOURCED FROM CANADA &amp; AUSTRALIA</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">factory</span>
+<span class="text-sm font-bold tracking-widest text-primary">CAPACITY: 200 MT/DAY</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pulse Item 1 -->
+<div class="group relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="vibrant red lentils in a heap on a dark surface, macro view showing texture and rich color with cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKCUbbHqM19YfqulMpHo7AxT5m-_fXnlFu-kjfI2TNOQM1JE_dp_-NfCtW8-gCR7Hgos7bZAuoRUj4TD2sUY-j05NjfDuthQYk0xb-fMV2qm02IobYwqV_TGKDfXvJViY6JF7oASCQLlJ3grvUQrMX2zfMbms5fsbxeDO1Qm2bpCz2eDwxDOzXB2vZiyjDF5OHmKLt7f7tN0sHyiopocqiGCVXP3gR1nIwx9N3SJxUsc6O9C1s0zQCKKrkIxzyvmopuDInSXrcj2k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform transition-transform group-hover:translate-y-[-10px]">
+<h4 class="text-3xl font-bold text-white mb-2">Red Lentils</h4>
+<p class="text-on-surface-variant text-sm mb-6">Football quality, polished or unpolished variants available.</p>
+<a class="inline-flex items-center text-secondary font-bold gap-2" href="#">
+                                Request Quote <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Pulse Item 2 -->
+<div class="group relative h-[450px] rounded-2xl overflow-hidden shadow-2xl mt-8 md:mt-16">
+<img class="w-full h-full object-cover" data-alt="overhead shot of black gram beans on a rustic wooden texture with moody shadows and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_-un4OvqqHLLTDH5MD3yhxItLFpPY-t4bGxtN_Qzj1uemEa2xY2WNcvJS2M6Hvsr4EcObCAEWXLb7B88FZP7tHNOaPiH0nia4EvB6x4v0r_W4q6SdFynd4PvU9DrHnY_nZsFRe_d7W6rnxil3Mvk8T7rS6Cx4dO_VIJshPePs7U3cuX8x4EQFIuZNKvNijaWSd9DmnCV70AxXDMcHuau2lISt-Rp4WQBwIUj_1DQuWD-QrUVwtkWtRAjfZf7cowKYWnopmysMG4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform transition-transform group-hover:translate-y-[-10px]">
+<h4 class="text-3xl font-bold text-white mb-2">Black Gram</h4>
+<p class="text-on-surface-variant text-sm mb-6">Whole or split, triple-cleaned for premium industrial use.</p>
+<a class="inline-flex items-center text-secondary font-bold gap-2" href="#">
+                                Request Quote <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 md:px-20 mt-32">
+<div class="glass-card p-12 md:p-24 rounded-[2rem] relative overflow-hidden text-center">
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-black text-on-surface tracking-tighter mb-8">Ready to Secure Your Supply Chain?</h2>
+<p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-12">
+                        Get in touch with our global trade desk for real-time pricing and logistics coordination. We specialize in bulk volume commitments.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="px-10 py-5 bg-primary-container text-secondary font-black text-lg rounded-xl hover:scale-105 active:opacity-80 transition-all shadow-[0_0_30px_rgba(233,195,73,0.1)]">
+                            Request a Quote
+                        </button>
+<button class="px-10 py-5 bg-surface-bright/50 backdrop-blur-xl border border-outline-variant/30 text-on-surface font-bold text-lg rounded-xl hover:bg-surface-container-highest transition-all">
+                            Download Catalog
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b1326] dark:bg-[#0b1326] w-full border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full">
+<div>
+<span class="text-lg font-black text-[#1b4332] uppercase tracking-widest block mb-6">Al-Gyas</span>
+<p class="text-emerald-800/60 dark:text-slate-500 font-['Inter'] font-light text-xs uppercase tracking-widest leading-relaxed max-w-sm">
+                    Global logistics and agricultural stewardship at the intersection of quality and scale.
+                </p>
+<p class="mt-8 text-emerald-800/60 dark:text-slate-500 font-['Inter'] font-light text-xs uppercase tracking-widest">
+                    © 2024 Al-Gyas. High-Tech Stewardship.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<a class="font-['Inter'] font-light text-xs uppercase tracking-widest text-emerald-800/60 dark:text-slate-500 hover:text-[#e9c349] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-['Inter'] font-light text-xs uppercase tracking-widest text-emerald-800/60 dark:text-slate-500 hover:text-[#e9c349] transition-colors duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-['Inter'] font-light text-xs uppercase tracking-widest text-emerald-800/60 dark:text-slate-500 hover:text-[#e9c349] transition-colors duration-300" href="#">Sustainability Report</a>
+<a class="font-['Inter'] font-light text-xs uppercase tracking-widest text-emerald-800/60 dark:text-slate-500 hover:text-[#e9c349] transition-colors duration-300" href="#">Global Logistics</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

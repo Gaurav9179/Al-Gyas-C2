@@ -1,0 +1,20 @@
+{
+  "name": "projects/2244744267494376959",
+  "projectId": "2244744267494376959",
+  "title": "Al-Gyas Modern Website Demo",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "DARK",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#2E7D32",
+    "saturation": 3
+  },
+  "screens": {},
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}
