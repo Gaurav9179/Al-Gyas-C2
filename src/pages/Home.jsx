@@ -33,38 +33,44 @@ export default function Home() {
 {/* Hero Section */}
 <section className="relative h-screen w-full flex items-center justify-center overflow-hidden perspective-[1000px]">
 <div className="absolute inset-0 z-0">
-<img alt="" className="w-full h-full object-cover opacity-40 scale-105" data-alt="cinematic wide shot of a sun-drenched wheat field at sunrise with a distant cargo ship on a misty horizon, deep green and gold tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiZOtMrjl18BnYqsNGhGebpRv4TsnF9u4ACReXnDwFvGxWgVRt4_XCNVzbhN8xz_5AHAxlzVtbfTC1oPovgr3h8u4sr5ADhwY-jYpytoLESjAQEEYteIigpnkvt037l7fXutPkgaMalVrL3DOqyminruXtwUM_9EkB1gMxTpOZn_GZIY0wI8WQDbH1zLZoCPpfjTzAHm52xbvQIQ2qytvmRBTeMoxJKqijESLWE9QOnJtsLklOXGTzXqd5obzgKPpglKUZnW1lK_o"/>
-<div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface-container-lowest/80"></div>
+<motion.img 
+    animate={{ scale: [1.05, 1.15, 1.05] }} 
+    transition={{ duration: 40, repeat: Infinity, ease: "linear" }} 
+    alt="Wheat field at sunrise" 
+    className="w-full h-full object-cover opacity-40 origin-center" 
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiZOtMrjl18BnYqsNGhGebpRv4TsnF9u4ACReXnDwFvGxWgVRt4_XCNVzbhN8xz_5AHAxlzVtbfTC1oPovgr3h8u4sr5ADhwY-jYpytoLESjAQEEYteIigpnkvt037l7fXutPkgaMalVrL3DOqyminruXtwUM_9EkB1gMxTpOZn_GZIY0wI8WQDbH1zLZoCPpfjTzAHm52xbvQIQ2qytvmRBTeMoxJKqijESLWE9QOnJtsLklOXGTzXqd5obzgKPpglKUZnW1lK_o"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-surface-container-lowest/80"></div>
 </div>
 <motion.div 
     onMouseMove={handleMouseMove}
     onMouseLeave={handleMouseLeave}
     style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-    className="relative z-10 text-center max-w-5xl px-6 w-full h-full flex flex-col justify-center items-center"
+    className="relative z-10 text-center max-w-5xl px-4 md:px-6 w-full h-full flex flex-col justify-center items-center mt-10 md:mt-0"
 >
-<motion.span style={{ transform: "translateZ(80px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label text-xs font-bold uppercase tracking-[0.2em] shadow-xl">Established 1994</motion.span>
-<motion.h1 style={{ transform: "translateZ(120px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-headline text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 text-on-surface text-glow drop-shadow-2xl">
-                Staple Supply Specialist &amp; <br/><span className="text-primary italic">Pulse to Plate</span> Precision
+<motion.span style={{ transform: "translateZ(80px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="inline-block mb-4 md:mb-6 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-xl backdrop-blur-sm">Established 1994</motion.span>
+<motion.h1 style={{ transform: "translateZ(120px)" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-headline text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-6 md:mb-8 text-on-surface text-glow drop-shadow-2xl">
+                Staple Supply Specialist &amp; <br/><span className="text-primary italic font-serif">Pulse to Plate</span> Precision
             </motion.h1>
-<motion.p style={{ transform: "translateZ(60px)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} className="font-body text-lg md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed opacity-90 drop-shadow-lg">
+<motion.p style={{ transform: "translateZ(60px)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} className="font-body text-base md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed opacity-90 drop-shadow-lg px-2">
                 Premium Agricultural Products Worldwide. Over 30 years of excellence in sourcing, processing, and global logistics.
             </motion.p>
-<motion.div style={{ transform: "translateZ(100px)" }} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.6 }} className="flex flex-col md:flex-row items-center justify-center gap-6">
-<a className="group relative px-10 py-5 bg-gradient-to-br from-primary to-primary-container rounded-lg overflow-hidden shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:scale-105 active:scale-95" href="#products">
-<span className="relative z-10 font-headline font-extrabold text-on-primary uppercase tracking-widest text-sm flex items-center gap-2">
+<motion.div style={{ transform: "translateZ(100px)" }} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6 md:px-0">
+<a className="group relative w-full sm:w-auto px-6 md:px-10 py-4 md:py-5 bg-gradient-to-br from-primary to-primary-container rounded-lg overflow-hidden shadow-2xl hover:shadow-primary/40 transition-all duration-500 md:hover:scale-105 active:scale-95" href="#products">
+<span className="relative z-10 font-headline font-extrabold text-on-primary uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-2">
                         Explore Our Products
-                        <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        <span className="material-symbols-outlined text-base md:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </span>
 </a>
-<button className="px-10 py-5 font-headline font-bold text-secondary uppercase tracking-widest text-sm border-b border-secondary/0 hover:border-secondary transition-all">
+<button className="w-full sm:w-auto px-6 md:px-10 py-4 md:py-5 font-headline font-bold text-secondary uppercase tracking-widest text-xs md:text-sm border-b border-transparent hover:border-secondary transition-all">
                     View Infrastructure
                 </button>
 </motion.div>
 </motion.div>
 {/* Scroll Indicator */}
-<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 z-20">
-<span className="font-label text-[10px] tracking-[0.3em] uppercase">Scroll</span>
-<div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+<div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 z-20">
+<span className="font-label text-[10px] tracking-[0.3em] uppercase hidden md:block">Scroll</span>
+<div className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-primary to-transparent"></div>
 </div>
 </section>
 {/* Infrastructure Grid (The "Factories") */}
